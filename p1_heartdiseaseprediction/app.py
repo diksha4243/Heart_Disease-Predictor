@@ -3,14 +3,15 @@ from sqlite3 import *
 from flask_mail import Mail, Message
 from random import randrange
 import pickle
+import smtplib, ssl
 
 app = Flask(__name__)
 app.secret_key = "finalyearproject"
 
-app.config['MAIL_SERVER']='sandbox.smtp.mailtrap.io'
-app.config['MAIL_PORT'] = 2525
-app.config['MAIL_USERNAME'] = '8bbf54d7d695b9'
-app.config['MAIL_PASSWORD'] = '871a46b8c889dd'
+app.config['MAIL_SERVER']='smtp.office365.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'projectgroup8.srms@outlook.com'
+app.config['MAIL_PASSWORD'] = 'Dvaggg@08srms'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
@@ -70,7 +71,7 @@ def signup():
 		for i in range(6):
 			pw = pw + text[randrange(len(text))]
 		print(pw)
-		msg = Message("Welcome to HeartDiseasePrediction", sender = "heartdiseasepredictorml@gmail.com", recipients = [em])
+		msg = Message("Welcome to HeartDiseasePrediction", sender = "heartdiseasepredictorml@outlook.com", recipients = [em])
 		msg.body = "Greetings from HeartDiseasePredictor! Your password is " + str(pw)
 		mail.send(msg)
 		con = None
@@ -132,7 +133,7 @@ def forgot():
 				for i in range(6):
 					pw1 = pw1 + text[randrange(len(text))]
 				print(pw1)
-				msg = Message("Hello again from HeartDiseasePrediction", sender = "heartdiseasepredictorml@gmail.com", recipients = [em])
+				msg = Message("Hello again from HeartDiseasePrediction", sender = "heartdiseasepredictorml@outlook.com", recipients = [em])
 				msg.body = "Greetings from HeartDiseasePredictor! Seems like you forgot your password. Your new password is " + str(pw1)
 				mail.send(msg)
 				try:
