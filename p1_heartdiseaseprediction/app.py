@@ -7,19 +7,12 @@ import smtplib, ssl
 
 app = Flask(__name__)
 app.secret_key = "finalyearproject"
-app.config['MAIL_SERVER']='sandbox.smtp.mailtrap.io'
-app.config['MAIL_PORT'] = 2525
-app.config['MAIL_USERNAME'] = '8bbf54d7d695b9'
-app.config['MAIL_PASSWORD'] = '871a46b8c889dd'
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-
-# app.config['MAIL_SERVER']='smtp.office365.com'
-# app.config['MAIL_PORT'] = 587
-# app.config['MAIL_USERNAME'] = 'projectgroup8.srms@outlook.com'
-# app.config['MAIL_PASSWORD'] = 'Dvaggg@08srms'
-# app.config['MAIL_USE_TLS'] = True
-# app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'projectgroup8.srms@gmail.com'
+app.config['MAIL_PASSWORD'] = 'goloavprdgpuolxa'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
 
 
 mail = Mail(app)
@@ -44,6 +37,7 @@ def check():
 		if 'username' in session:
 			name = session['username']
 		age = float(request.form["age"])
+		gender = str(request.form["gender"])
 		r1 = request.form["r1"]
 		if r1 == "1":
 			cp = 1
@@ -60,10 +54,19 @@ def check():
 		fluro = float(request.form["fluro"])
 		Th = float(request.form["Th"])
 		d = [[age, cp, BP, CH, maxhr, STD, fluro, Th]]	
+		con = None
+		try:
+			con = connect("group8.db")
+			cursor = con.cursor()
+			sql = "insert into heartdb values('%s', '%s','%s', '%s', '%s', '%s', '%s', '%s', '%s')"
+			con.execute(sql % (str(age), str(gender),str(cp), str(BP), str(CH), str(maxhr), str(STD), str(fluro), str(Th)))
+			con.commit()
+		except Exception as e:
+			print(e)
 		with open("heartdiseaseprediction.model", "rb") as f:
 			model = pickle.load(f)	
 		res = model.predict(d)
-		return render_template("find.html", msg = res, name = session['username'])	
+		return render_template("find.html", msg = res[0], name = session['username'])	
 	else:
 		return render_template("home.html")
 
