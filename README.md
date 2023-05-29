@@ -11,11 +11,11 @@ HTML, CSS, BOOTSTRAP - The entire frontend of the application have been made usi
 
 Database-Sqlite3 name - group8.db table name - heartdb
 
-Dataset- Heart Disease Prediction dataset from kaggle.com Link -(https://www.kaggle.com/rishidamarla/heart-disease-prediction)
+Dataset- Heart Disease Prediction dataset from kaggle.com Link -https://www.kaggle.com/rishidamarla/heart-disease-prediction
 
 
 
-**how to run the code**
+**How to run the code**
 1. In the terminal type  cd .\p1_heartdiseaseprediction\
 2. Then run python app.py
 
