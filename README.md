@@ -1,7 +1,7 @@
 # Heart Disease Prediction
 
 ## Introduction
-Machine Learning -  It is dade with the help of Random Forest Classifier Algorithm, used random state = 3136
+Machine Learning -  It is made with the help of Random Forest Classifier Algorithm, used random state = 3136
 
 Model prediction Accuracy - 87%
 
