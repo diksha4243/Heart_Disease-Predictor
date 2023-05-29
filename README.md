@@ -15,7 +15,9 @@ Dataset- Heart Disease Prediction dataset from kaggle.com https://www.kaggle.com
 
 ## Team Members
 Aradhika Agarwal (1900140100020)
+
 Diksha Verma (1900140100036)
+
 Garima Gupta (1900140100040)
 
  ## How to run the code
