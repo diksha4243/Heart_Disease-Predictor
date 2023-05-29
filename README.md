@@ -17,16 +17,22 @@ Dataset- Heart Disease Prediction dataset from kaggle.com Link -https://www.kagg
 
 **How to run the code**
 1.Creating a virtual environment
-'''py -m venv env
-.\env\Scripts\activate '''
+```
+py -m venv env
+.\env\Scripts\activate 
+```
 
 2.Creating a requirement.txt file 
-''' pip install -r requirements.txt
-    pip freeze > requirements.txt '''
+```
+pip install -r requirements.txt
+pip freeze > requirements.txt
+```
 
 3.Then run the following commands:-
-''' cd .\p1_heartdiseaseprediction\
-    python app.py '''
+``` 
+cd .\p1_heartdiseaseprediction\
+python app.py 
+```
 
 
 
