@@ -18,7 +18,7 @@ Aradhika Agarwal (1900140100020)
 Diksha Verma (1900140100036)
 Garima Gupta (1900140100040)
 
- ##How to run the code
+ ## How to run the code
 1.Creating a virtual environment
 ```
 py -m venv env
