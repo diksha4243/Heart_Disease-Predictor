@@ -1,6 +1,6 @@
 # Heart Disease Prediction
 
-**Introduction**
+## Introduction
 Machine Learning -  It is dade with the help of Random Forest Classifier Algorithm, used random state = 3136
 
 Model prediction Accuracy - 87%
@@ -13,9 +13,12 @@ Database-Sqlite3 name - group8.db table name - heartdb
 
 Dataset- Heart Disease Prediction dataset from kaggle.com https://www.kaggle.com/rishidamarla/heart-disease-prediction
 
+## Team Members
+Aradhika Agarwal (1900140100020)
+Diksha Verma (1900140100036)
+Garima Gupta (1900140100040)
 
-
-**How to run the code**
+ ##How to run the code
 1.Creating a virtual environment
 ```
 py -m venv env
@@ -33,6 +36,6 @@ pip freeze > requirements.txt
 cd .\p1_heartdiseaseprediction\
 python app.py 
 ```
-
+Go to http://127.0.0.1:5000 to open the signup page
 
 
