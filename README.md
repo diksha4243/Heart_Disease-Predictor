@@ -11,7 +11,7 @@ HTML, CSS, BOOTSTRAP - The entire frontend of the application have been made usi
 
 Database-Sqlite3 name - group8.db table name - heartdb
 
-Dataset- Heart Disease Prediction dataset from kaggle.com Link -https://www.kaggle.com/rishidamarla/heart-disease-prediction
+Dataset- Heart Disease Prediction dataset from kaggle.com `https://www.kaggle.com/rishidamarla/heart-disease-prediction'
 
 
 
